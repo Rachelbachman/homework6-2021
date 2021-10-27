@@ -151,7 +151,7 @@ header {
         display: none;
     }
 
-    .pricing, #pricing, .card li:nth-child(even)::before{
+    .pricing, #pricing, .card li:nth-child(even)::after{
         content: "\1F44D"
     }
 
