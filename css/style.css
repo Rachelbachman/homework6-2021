@@ -140,7 +140,6 @@ header {
         align-items: center;
         justify-content: center;
         flex-flow: nowrap;
-        font-family: serif;
     }
 
     .card{
