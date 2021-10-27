@@ -1,4 +1,5 @@
 
+
 body{
     font-family: 'Alegreya Sans SC', serif ;
     background-image: url('../images/concrete_seamless.png');
@@ -7,7 +8,6 @@ body{
 
 header {
     display:flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center; 
 }
@@ -32,7 +32,6 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
     border-top-right-radius: 7px ;
-    border-bottom-right-radius: 7px;
     border-top-left-radius: 7px;
 }
 
@@ -88,6 +87,11 @@ header {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      position:sticky;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
   }
 
   .nav_links{
@@ -101,6 +105,10 @@ header {
   
 }
 
+.card header{
+    position: static;
+}
+
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -109,4 +117,50 @@ header {
         animation-name:none 
     }
   
+}
+
+@media print{
+    body{
+        background-image:none;
+    }
+
+    nav{
+        width:100%
+    }
+
+    .nav_links{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pricing{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-flow: nowrap;
+        font-family: serif;
+    }
+
+    .card{
+        border: 2px #45ADAD solid;
+        flex-basis: 250px;
+    }
+
+    #gallery, .gallery{
+        display: none;
+    }
+
+    .pricing, #pricing, .card li:nth-child(even)::before{
+        content: "\1F44D"
+    }
+
+    .pricing, #pricing, .card li:nth-child(1)::before{
+        content: "\1F44D"
+    }
+
+    .pricing, #pricing, .card li:nth-child(3)::before{
+        content: "\1F44D"
+    }
 }
